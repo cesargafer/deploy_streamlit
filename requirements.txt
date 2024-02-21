@@ -1,5 +1,4 @@
 firebase_admin
-json
 firestore-admin
 streamlit
 altair
