@@ -1,0 +1,5 @@
+firestore-admin
+streamlit
+altair
+pandas
+numpy
