@@ -1,5 +1,16 @@
 
 
+
+import streamlit as st
+
+import json
+from firebase_admin import initialize_app
+import pandas as pd
+import streamlit as st
+import firebase_admin
+from firebase_admin import credentials, firestore
+
+
 import streamlit as st
 import pandas as pd
 from google.cloud import firestore
@@ -15,20 +26,31 @@ from firebase_admin import credentials, firestore
 
 
 
-@st.cache_resource(hash_funcs={credentials.Certificate: id})
-def initialize_firestore():
-    try:
-        initialize_app(credentials.Certificate(reto-netflix-a4e46-firebase-adminsdk-l5d20-32210b41c7.json))
-    except ValueError:
-        # La aplicación ya está inicializada, maneja el error según sea necesario
-        pass
-
-    # No necesitamos pasar las credenciales al cliente de Firestore
-    # Inicializar el cliente de Firestore
-    return firestore.client()
+#@st.cache_resource(hash_funcs={credentials.Certificate: id})
+#def initialize_firestore():
+#    try:
+#        initialize_app(credentials.Certificate(credenciales_json))
+#    except ValueError:
+#        # La aplicación ya está inicializada, maneja el error según sea necesario
+#        pass
+#
+#    # No necesitamos pasar las credenciales al cliente de Firestore
+#    # Inicializar el cliente de Firestore
+#    return firestore.client()
 
 # Obtener el cliente de Firestore
-db = initialize_firestore()
+#db = initialize_firestore()
+
+# Inicializar Firebase Admin SDK
+try:
+    initialize_app(credentials.Certificate(credenciales_json))
+except ValueError:
+    # La aplicación ya está inicializada, maneja el error según sea necesario
+    pass
+
+# Obtener el cliente de Firestore
+db = firestore.client()
+
 
 ##
 ##
