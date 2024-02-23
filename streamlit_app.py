@@ -145,12 +145,6 @@ def insertar_filme(nombre, director, genero, compañia):
         u'genre': genero,
         u'company': compañia
     })
-    st.success("El filme se ha insertado correctamente en la base de datos.")
-    # Limpiar los campos del formulario después de insertar el filme
-    nombre_input.text_input = ""
-    director_input.text_input = ""
-    genero_select.selectbox = ""
-    compañia_input.text_input = ""
 
 # Interfaz de Streamlit
 st.sidebar.title("Agregar Nuevo Filme")
