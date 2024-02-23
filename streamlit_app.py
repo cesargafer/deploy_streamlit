@@ -183,8 +183,15 @@ if submit_button:
     if nombre_input.strip() and director_input.strip() and genero_select.strip() and compañia_input.strip():
         # Llamar a la función para insertar el nuevo filme en Firestore
         insertar_filme(nombre_input, director_input, genero_select, compañia_input)
+        
+        # Limpiar los campos del formulario después de insertar el filme
+        nombre_input = ""
+        director_input = ""
+        genero_select = ""
+        compañia_input = ""
     else:
         st.warning("Por favor ingresa todos los datos del filme.")
+
 
 
 # Botón para insertar el nuevo filme
