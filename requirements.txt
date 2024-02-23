@@ -1,5 +1,4 @@
 firebase_admin
-firestore-admin
 streamlit
 altair
 pandas
