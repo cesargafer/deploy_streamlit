@@ -188,12 +188,3 @@ if submit_button:
 
 
 
-# Botón para insertar el nuevo filme
-if submit_button:
-    # Validar que se hayan ingresado todos los datos
-    if nombre_input.strip() and director_input.strip() and genero_select.strip() and compañia_input.strip():
-        # Llamar a la función para insertar el nuevo filme en Firestore
-        insertar_filme(nombre_input, director_input, genero_select, compañia_input)
-    else:
-        st.warning("Por favor ingresa todos los datos del filme.")
-
