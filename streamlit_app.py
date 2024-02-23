@@ -43,7 +43,7 @@ from firebase_admin import credentials, firestore
 
 # Inicializar Firebase Admin SDK
 try:
-    initialize_app(credentials.Certificate(credenciales_json))
+    initialize_app(credentials.Certificate(reto-netflix-a4e46-firebase-adminsdk-l5d20-32210b41c7.json))
 except ValueError:
     # La aplicación ya está inicializada, maneja el error según sea necesario
     pass
